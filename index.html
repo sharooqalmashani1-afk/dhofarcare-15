@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DhofarCare — Home Services in Salalah</title>
+  <meta name="description" content="DhofarCare: A smart digital platform for booking trusted home services in Salalah, Dhofar."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="config.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="DhofarCare logo" class="logo"/>
+      <span class="brand-name">DhofarCare</span>
+    </div>
+    <nav class="nav">
+      <a href="#book">Book</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="cta" href="#book">Book Now</a>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-copy">
+      <h1>Smart Home Services in <span class="highlight">Salalah</span></h1>
+      <p>Book trusted cleaners, maintenance, beauty-at-home, and more — verified providers near you with 24/7 support.</p>
+      <ul class="ticks">
+        <li>✅ Local & verified providers</li>
+        <li>✅ Transparent pricing ranges</li>
+        <li>✅ Fast booking & instant confirmation</li>
+      </ul>
+      <div class="hero-actions">
+        <a href="#book" class="btn primary">Book a Service</a>
+        <a href="#services" class="btn ghost">Explore Services</a>
+      </div>
+      <div class="auto-reply">
+        <strong>Auto‑reply (24/7):</strong> Hello! 👋 We're online around the clock. Tell us your service, preferred time, and location in Salalah. Prices typically range 5–20 OMR/hour. For urgent help call/WhatsApp <span class="phone"></span> or email <span class="email"></span>.
+      </div>
+    </div>
+    <div class="hero-media">
+      <video class="side-video" src="assets/hero-video.mp4" autoplay muted loop playsinline></video>
+      <img class="fallback" src="assets/platform-3d.png" alt="Platform Mockup"/>
+    </div>
+  </section>
+
+  <section class="banner">
+    <p>Service area: <span class="area"></span> • Support: <span class="email"></span></p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Popular Services</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="assets/home-services.jpg" alt="Cleaning service">
+        <h3>Home Cleaning ✨</h3>
+        <p>Standard / Deep cleaning, kitchen & bathrooms. Family‑friendly and pet‑safe.</p>
+      </article>
+      <article class="card">
+        <img src="assets/home-services.jpg" alt="Maintenance service">
+        <h3>Maintenance 🛠️</h3>
+        <p>AC checks, plumbing, electrical fixes, furniture assembly, and more.</p>
+      </article>
+      <article class="card">
+        <img src="assets/home-services.jpg" alt="Beauty service">
+        <h3>Beauty at Home 💅</h3>
+        <p>Home salon sessions by vetted specialists — comfort and convenience.</p>
+      </article>
+      <article class="card">
+        <img src="assets/home-services.jpg" alt="Specialty service">
+        <h3>Specialty 🧼</h3>
+        <p>Sofas & carpets, move‑in/out cleaning, post‑event cleanups, and more.</p>
+      </article>
+    </div>
+    <div class="center mt">
+      <a href="#book" class="btn primary">Book in 60 seconds</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-inner">
+      <div>
+        <h2>About DhofarCare</h2>
+        <p>DhofarCare is a local platform that connects Salalah households with trusted service providers. We empower micro‑entrepreneurs in Dhofar and make home services easy, transparent, and safe. Aligned with Oman Vision 2040 — supporting SME growth, digital transformation, and community value.</p>
+        <ul class="emoji-list">
+          <li>📍 Salalah‑first approach</li>
+          <li>🛡️ Verified providers</li>
+          <li>💳 Secure, simple checkout (demo)</li>
+          <li>🤝 Community‑driven & inclusive</li>
+        </ul>
+      </div>
+      <img src="assets/platform-3d.png" alt="DhofarCare concept" class="about-img"/>
+    </div>
+  </section>
+
+  <section id="book" class="booking">
+    <h2>Book a Service</h2>
+    <form id="bookingForm" class="form">
+      <div class="row">
+        <label>Full Name
+          <input type="text" name="name" required placeholder="Your name">
+        </label>
+        <label>Phone (Oman)
+          <input type="tel" name="userphone" required placeholder="+9685xxxxxxx">
+        </label>
+      </div>
+      <div class="row">
+        <label>Service
+          <select name="service" required>
+            <option value="" disabled selected>Select service</option>
+            <option>Home Cleaning</option>
+            <option>Maintenance</option>
+            <option>Beauty at Home</option>
+            <option>Specialty</option>
+          </select>
+        </label>
+        <label>Preferred Date & Time
+          <input type="datetime-local" name="datetime" required>
+        </label>
+      </div>
+      <div class="row">
+        <label>Address (Salalah only)
+          <input type="text" name="address" required placeholder="E.g., Al Haffa, street...">
+        </label>
+        <label>Notes
+          <input type="text" name="notes" placeholder="Any notes (optional)">
+        </label>
+      </div>
+      <div class="row">
+        <label>Payment (Demo)
+          <select name="pay" required>
+            <option value="" disabled selected>Select method</option>
+            <option>Card</option>
+            <option>Cash on site</option>
+          </select>
+        </label>
+      </div>
+      <button class="btn primary" type="submit">Continue to Payment</button>
+      <p class="muted">By continuing, you accept our demo terms. No real charges will be made.</p>
+    </form>
+
+    <div id="paymentPanel" class="payment hidden">
+      <h3>Enter Card Details (Demo)</h3>
+      <form id="paymentForm" class="form">
+        <div class="row">
+          <label>Name on Card
+            <input type="text" name="cardname" required>
+          </label>
+          <label>Card Number
+            <input type="text" name="cardnumber" required maxlength="19" placeholder="4242 4242 4242 4242">
+          </label>
+        </div>
+        <div class="row">
+          <label>Expiry (MM/YY)
+            <input type="text" name="exp" required maxlength="5" placeholder="12/27">
+          </label>
+          <label>CVC
+            <input type="password" name="cvc" required maxlength="4" placeholder="***">
+          </label>
+        </div>
+        <button class="btn primary" type="submit">Pay & Confirm</button>
+        <button class="btn ghost" type="button" id="backToBooking">Back</button>
+        <p class="muted">Demo only — for presentation purposes.</p>
+      </form>
+    </div>
+
+    <div id="successPanel" class="success hidden">
+      <div class="bigcheck">✔</div>
+      <h3>Booking Received</h3>
+      <p>Your request has been recorded successfully. Check your email/SMS soon. For urgent questions, WhatsApp <span class="phone"></span>.</p>
+      <a class="btn primary" href="#home" id="newBooking">Make another booking</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Quick Chat 💬</h3>
+        <p>WhatsApp: <a class="phoneLink"><span class="phone"></span></a></p>
+        <p>Auto‑reply: Always on — <span class="hours"></span></p>
+      </div>
+      <div class="contact-card">
+        <h3>Email 📧</h3>
+        <p><a class="emailLink"><span class="email"></span></a></p>
+        <p>We typically respond within minutes.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Address 📍</h3>
+        <p class="address"></p>
+        <p class="area"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="brand">
+      <img src="assets/logo.png" alt="" class="logo small"/> <strong>DhofarCare</strong>
+    </div>
+    <p>© <span id="year"></span> DhofarCare • All rights reserved • Salalah, Dhofar</p>
+  </footer>
+</body>
+</html>
